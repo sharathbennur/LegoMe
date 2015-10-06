@@ -177,7 +177,7 @@ def predictLegoRF(ASIN):
 		modelRF.fit(model_features, np.ravel(model_target))
 
 		print "Model Created"
-		try:
+		try: # save to shelf
 			model_shelf['RF'] = modelRF
 			model_shelf['ASINs'] = ASINs
 			model_shelf['time_to_sellout'] = time_to_sellout
